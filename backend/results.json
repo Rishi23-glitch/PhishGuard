@@ -1,0 +1,43 @@
+{
+  "dataset": {
+    "total": 235370,
+    "phishing": 100520,
+    "legitimate": 134850,
+    "train": 188296,
+    "test": 47074,
+    "split": "stratified random 80/20 (no date column, so this is a proxy for unseen data)"
+  },
+  "classifier": {
+    "accuracy": 0.9664145812975315,
+    "precision": 0.9801441235937581,
+    "recall": 0.9404098686828491,
+    "f1": 0.9598659660345746,
+    "roc_auc": 0.9878931502792817,
+    "tn": 26587,
+    "fp": 383,
+    "fn": 1198,
+    "tp": 18906
+  },
+  "zero_day_proxy": {
+    "classifier_only": {
+      "detection_rate": 0.9404098686828491,
+      "false_positive_rate": 0.014200964034111977
+    },
+    "anomaly_only": {
+      "detection_rate": 0.5770990847592519,
+      "false_positive_rate": 0.05150166852057842
+    },
+    "classifier_or_anomaly": {
+      "detection_rate": 0.950208913649025,
+      "false_positive_rate": 0.05736002966258806
+    }
+  },
+  "masking": {
+    "punycode_correct": "4/4",
+    "redirect_chain": {
+      "tested": true,
+      "flagged": true,
+      "reason": "URL redirects 4 times before landing on its final page"
+    }
+  }
+}
